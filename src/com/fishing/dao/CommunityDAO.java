@@ -106,7 +106,7 @@ public class CommunityDAO {
 
 		public boolean insertBoard(CommunityVO cvo) {
 			boolean result = false;
-			String query = "insert into fishing.community(title, nicname, content, file, ref) values(?, ?, ?, ?, ?)";
+			String query = "insert into fishing.community(title, nicname, content, file) values(?, ?, ?, ?)";
 			
 			Connection con = null;
 			PreparedStatement pstmt = null;
@@ -125,7 +125,7 @@ public class CommunityDAO {
 				pstmt.setString(2, cvo.getnicname());
 				pstmt.setString(3, cvo.getContent());
 				pstmt.setString(4, cvo.getFile());
-				pstmt.setInt(5, getMaxRef()+1);
+				
 				
 				if (pstmt.executeUpdate() == 1) {
 					result = true;
@@ -141,7 +141,7 @@ public class CommunityDAO {
 		}
 		// -------------------------------- 게시판 글을 조회하는 메서드(상세보기) ---------------------------------
 		// 글번호로 찾아본다. 실패 : null
-		public CommunityVO selectOneBoard(String communityNum) {
+		public CommunityVO selectOneBoard(String communityNum ) {
 			String query = "select * from fishing.community where communityNum = ?";
 			
 			Connection con = null;
@@ -159,7 +159,12 @@ public class CommunityDAO {
 				rs = pstmt.executeQuery();
 				while (rs.next()) {
 					cvo = new CommunityVO(
-							rs.getInt("communityNum")
+							rs.getInt("communityNum"),
+							rs.getString("title"),
+							rs.getString("nicname"),
+							rs.getDate("date"),
+							rs.getInt("count"),
+							rs.getString("content")
 					);
 				}
 			} catch (SQLException e) {
@@ -217,7 +222,7 @@ public class CommunityDAO {
 				DBMangement.close(pstmt, con);
 			}
 		}
-		//글 삭제하는 메서드
+		//-------------------------------------------글 삭제하는 메서드--------------------------------------------
 		public void deleteBoard(String communityNum){
 		      String query = "delete from fishing.community where communityNum = ?"; //수정
 		      Connection con = null;
@@ -226,6 +231,7 @@ public class CommunityDAO {
 		         con = DBMangement.getConnection();
 		         pstmt = con.prepareStatement(query);
 		         pstmt.setString(1, communityNum);
+		         
 		         pstmt.executeUpdate();
 		         }catch(SQLException e){
 		         e.printStackTrace();
@@ -234,7 +240,7 @@ public class CommunityDAO {
 		         }
 		   }
 		
-		
+		//----------------------------------------총게시글의 수를 세는 메서드---------------------------------------
 		public int AllBoardcount() {
 			String query = "select count(communityNum)as allNum from fishing.community";
 			
@@ -261,6 +267,10 @@ public class CommunityDAO {
 			return allNum;
 		}
 
+		public void topTenBoard(){
+			String query = "select * from ";
+
+		}
 
 }
 		
@@ -270,24 +280,4 @@ public class CommunityDAO {
 		
 		
 		
-		
-		
-		
-		
-		
-		
-		
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
 

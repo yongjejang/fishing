@@ -19,10 +19,11 @@ public class CommunityViewAction implements Action {
 		String url ="/communityboard/communityboardView.jsp";
 		String communityNum = request.getParameter("communityNum");
 
-		System.out.println(communityNum);
+//		System.out.println(communityNum);
 	
 	    CommunityDAO cDao = CommunityDAO.getInstance();
 		CommunityVO cvo = cDao.selectOneBoard(communityNum);
+		System.out.println(cvo);
 		
 		if (cvo != null) {
 			// 조회수 증가

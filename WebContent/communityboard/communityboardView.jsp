@@ -92,6 +92,6 @@ function save(){
 		<input type="button" value="댓글달기" onclick="location.href='community.do?command=community_reply_form&communityNum =${cboard1.communityNum }&ref=${cboard1.ref}&step=${cboard1.step }&reforder=${cboard1.reforder }';" />
 	
 	</div>
-		
+
 </body>
 </html>

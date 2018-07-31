@@ -24,7 +24,7 @@ public class CommunityWriteAction implements Action {
 		
 		cvo.setTitle(request.getParameter("title"));
 		
-		cvo.setFile(request.getParameter("fileName"));
+		cvo.setFile(request.getParameter("file"));
 		
 		// 줄바꿈 처리(탭처리, &처리)를 위한 로직
 		cvo.setContent(request.getParameter("content").replace("\r\n", "<br />").replace("&","&amp;"));

@@ -56,9 +56,19 @@ public class CommunityVO {
 		
 	}
 
-	public CommunityVO() {
+	public CommunityVO(int communityNum, String title, String nicname, Date date, int count, String content) {
+		this.communityNum = communityNum;
+		this.title = title;
+		this.nicname = nicname;
+		this.date = date;
+		this.count = count;
+		this.content = content;
 	}
 
+
+	public CommunityVO() {
+		// TODO Auto-generated constructor stub
+	}
 
 	public int getcount(){
 		return allNum;
