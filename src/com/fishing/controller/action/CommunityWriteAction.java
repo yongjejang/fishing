@@ -18,13 +18,13 @@ public class CommunityWriteAction implements Action {
 		
 		
 	CommunityVO cvo = new CommunityVO();
-		
+	
+	
+	
+		cvo.setTitle(request.getParameter("title"));
 		
 		cvo.setnicname(request.getParameter("nicname"));
 		
-		cvo.setTitle(request.getParameter("title"));
-		
-		cvo.setFile(request.getParameter("file"));
 		
 		// 줄바꿈 처리(탭처리, &처리)를 위한 로직
 		cvo.setContent(request.getParameter("content").replace("\r\n", "<br />").replace("&","&amp;"));
@@ -34,7 +34,7 @@ public class CommunityWriteAction implements Action {
 			// 자바스크립트로 메세지 뿌려주고
 			new CommunityListAction().excute(request, response); // 리스트 페이지로 이동
 		} else {
-			// 저장 안 됨
+			//저장 안됨
 		}
 		
 		

@@ -106,7 +106,7 @@ public class CommunityDAO {
 
 		public boolean insertBoard(CommunityVO cvo) {
 			boolean result = false;
-			String query = "insert into fishing.community(title, nicname, content, file) values(?, ?, ?, ?)";
+			String query = "insert into community(title, nicname, content) values (?,?,?);";
 			
 			Connection con = null;
 			PreparedStatement pstmt = null;
@@ -124,7 +124,6 @@ public class CommunityDAO {
 				pstmt.setString(1, cvo.getTitle());
 				pstmt.setString(2, cvo.getnicname());
 				pstmt.setString(3, cvo.getContent());
-				pstmt.setString(4, cvo.getFile());
 				
 				
 				if (pstmt.executeUpdate() == 1) {
