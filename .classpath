@@ -8,16 +8,15 @@
 			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/gd16/Desktop/Model2Project/자바 라이브러리 파일/cos.jar"/>
-	<classpathentry kind="lib" path="C:/Users/gd16/Desktop/Model2Project/자바 라이브러리 파일/gson-2.8.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/gd16/Desktop/Model2Project/자바 라이브러리 파일/mail-1.4.7.jar"/>
-	<classpathentry kind="lib" path="C:/Users/gd16/Desktop/Model2Project/자바 라이브러리 파일/mysql-connector-java-8.0.11.jar"/>
-	<classpathentry kind="lib" path="C:/Users/gd16/Desktop/Model2Project/자바 라이브러리 파일/ojdbc6.jar"/>
-	<classpathentry kind="lib" path="C:/Users/gd16/Desktop/Model2Project/자바 라이브러리 파일/taglibs-standard-compat-1.2.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/gd16/Desktop/Model2Project/자바 라이브러리 파일/taglibs-standard-impl-1.2.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/gd16/Desktop/Model2Project/자바 라이브러리 파일/taglibs-standard-jstlel-1.2.5.jar"/>
-	<classpathentry kind="lib" path="C:/Users/gd16/Desktop/Model2Project/자바 라이브러리 파일/taglibs-standard-spec-1.2.5.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v8.5"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/gd5/Documents/카카오톡 받은 파일/180717_member/activation.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gd5/Documents/카카오톡 받은 파일/180717_member/cos.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gd5/Documents/카카오톡 받은 파일/180717_member/mail.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gd5/Documents/카카오톡 받은 파일/180717_member/mysql-connector-java-8.0.11.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gd5/Documents/카카오톡 받은 파일/180717_member/taglibs-standard-compat-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gd5/Documents/카카오톡 받은 파일/180717_member/taglibs-standard-impl-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gd5/Documents/카카오톡 받은 파일/180717_member/taglibs-standard-jstlel-1.2.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/gd5/Documents/카카오톡 받은 파일/180717_member/taglibs-standard-spec-1.2.5.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

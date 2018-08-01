@@ -4,7 +4,7 @@ import java.sql.Date;
 
 public class CommunityVO {
 	
-	private String nicname;
+	private String nickname;
 	private Date date;
 	private String title;
 	private String content;
@@ -23,10 +23,10 @@ public class CommunityVO {
 	
 	
 	
-	public CommunityVO(String nicname, Date date, String title, String content, int recommend, String file,
+	public CommunityVO(String nickname, Date date, String title, String content, int recommend, String file,
 			int count, int ref, int step, int reforder, int replynum, int cartegory, int communityNum) {
 
-		this.nicname = nicname;
+		this.nickname = nickname;
 		this.date = date;
 		this.title = title;
 		this.content = content;
@@ -46,20 +46,20 @@ public class CommunityVO {
 	}
 
 
-	public CommunityVO(int communityNum, String title, Date date, String nicname, int count) {
+	public CommunityVO(int communityNum, String title, Date date, String nickname, int count) {
 		this.communityNum = communityNum;
 		this.title = title;
 		this.date = date;
-		this.nicname = nicname;
+		this.nickname = nickname;
 		this.count = count;
 		
 		
 	}
 
-	public CommunityVO(int communityNum, String title, String nicname, Date date, int count, String content) {
+	public CommunityVO(int communityNum, String title, String nickname, Date date, int count, String content) {
 		this.communityNum = communityNum;
 		this.title = title;
-		this.nicname = nicname;
+		this.nickname = nickname;
 		this.date = date;
 		this.count = count;
 		this.content = content;
@@ -82,11 +82,11 @@ public class CommunityVO {
 	public void setCommunityNum(int communityNum) {
 		this.communityNum = communityNum;
 	}
-	public String getnicname() {
-		return nicname;
+	public String getnickname() {
+		return nickname;
 	}
-	public void setnicname(String nicname) {
-		this.nicname = nicname;
+	public void setnickname(String nickname) {
+		this.nickname = nickname;
 	}
 	public Date getDate() {
 		return date;
@@ -157,7 +157,7 @@ public class CommunityVO {
 
 	@Override
 	public String toString() {
-		return "CommunityVO [nicname=" + nicname + ", date=" + date + ", title=" + title + ", content=" + content
+		return "CommunityVO [nickname=" + nickname + ", date=" + date + ", title=" + title + ", content=" + content
 				+ ", recommend=" + recommend + ", file=" + file + ", count=" + count + ", ref=" + ref + ", step=" + step
 				+ ", reforder=" + reforder + ", replynum=" + replynum + ", cartegory=" + cartegory + ", communityNum="
 				+ communityNum + ", allNum=" + allNum + "]";

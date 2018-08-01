@@ -19,12 +19,12 @@ public class CommunityUpdateAction implements Action {
 		CommunityVO cvo = new CommunityVO();
 		String communityNum = request.getParameter("communityNum");
 		String title = request.getParameter("title");
-		String nicname = request.getParameter("nicname");
+		String nickname = request.getParameter("nickname");
 		String content = request.getParameter("content");
 		
 		//CommunityVO 객체에 저장
 		cvo.setCommunityNum(Integer.parseInt(communityNum));
-		cvo.setnicname(nicname);
+		cvo.setnickname(nickname);
 		cvo.setTitle(title);
 		cvo.setContent(content);
 		

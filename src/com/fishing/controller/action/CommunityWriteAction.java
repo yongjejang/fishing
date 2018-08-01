@@ -20,7 +20,7 @@ public class CommunityWriteAction implements Action {
 	CommunityVO cvo = new CommunityVO();
 		
 		
-		cvo.setnicname(request.getParameter("nicname"));
+		cvo.setnickname(request.getParameter("nickname"));
 		
 		cvo.setTitle(request.getParameter("title"));
 		

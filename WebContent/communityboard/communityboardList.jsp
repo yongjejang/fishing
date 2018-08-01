@@ -61,7 +61,7 @@
 				<td>			
 				<a href='community.do?command=community_view&communityNum=${cboard1.communityNum}'>${cboard1.title }</a>
 				</td>
-				<td>${cboard1.nicname }</td>
+				<td>${cboard1.nickname }</td>
 				<td><fmt:formatDate value="${cboard1.date }" /></td>
 				<td>${cboard1.count }</td>	
 				

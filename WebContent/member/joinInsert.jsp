@@ -31,6 +31,7 @@
                     <fieldset class="Edit-text">
 			    	  	<div class="form-group">
 			    		   아이디(*)  <input class="form-control" placeholder="ID" name="userId" type="text">
+			    		   <input type="button" value="중복확인" name ="idBtn" onclick="idCheck()">
 			    		</div>
 			    		<div class="form-group">
 			    			패스워드(*)  <input class="form-control" placeholder="PassWord" name="password" type="password" value="">
@@ -40,10 +41,14 @@
 			    		</div>
 			    		<div class="form-group">
 			    		     닉네임  <input class="form-control" placeholder="nickName" name="email" type="text">
+			    		<input type="button" value="중복확인" name ="nickBtn" onclick="nickCheck()">
+			    		     
 			    		</div>
 			    		
 			    		<div class="form-group">
 			    		   전화번호(*)   <input class="form-control" placeholder="phone" name="email" type="text">
+			    		 <input type="button" value="중복확인" name ="phoneBtn" onclick="phoneCheck()">
+			    		   
 			    		</div>
 			    		<div class="form-group">
 			    		    이메일  <input class="form-control" placeholder="email" name="email" type="text">

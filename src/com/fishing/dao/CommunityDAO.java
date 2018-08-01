@@ -46,7 +46,7 @@ public class CommunityDAO {
 								rs.getInt("communityNum"),
 								rs.getString("title"),
 								rs.getDate("date"),
-								rs.getString("nicname"),
+								rs.getString("nickname"),
 								rs.getInt("count")
 								));
 			}
@@ -106,7 +106,7 @@ public class CommunityDAO {
 
 		public boolean insertBoard(CommunityVO cvo) {
 			boolean result = false;
-			String query = "insert into fishing.community(title, nicname, content, file) values(?, ?, ?, ?)";
+			String query = "insert into fishing.community(title, nickname, content, file) values(?, ?, ?, ?)";
 			
 			Connection con = null;
 			PreparedStatement pstmt = null;
@@ -122,7 +122,7 @@ public class CommunityDAO {
 				 */
 				
 				pstmt.setString(1, cvo.getTitle());
-				pstmt.setString(2, cvo.getnicname());
+				pstmt.setString(2, cvo.getnickname());
 				pstmt.setString(3, cvo.getContent());
 				pstmt.setString(4, cvo.getFile());
 				
@@ -161,7 +161,7 @@ public class CommunityDAO {
 					cvo = new CommunityVO(
 							rs.getInt("communityNum"),
 							rs.getString("title"),
-							rs.getString("nicname"),
+							rs.getString("nickname"),
 							rs.getDate("date"),
 							rs.getInt("count"),
 							rs.getString("content")
@@ -201,7 +201,7 @@ public class CommunityDAO {
 				// update fishing.community set content = '짜파게티~', title='오늘의 요리는~' where num=3;
 				// cvo ; 새롭게 수정할 글 객체
 		public void updateBoard(CommunityVO cvo) {
-			String query = "update fishing.community set title = ? , nicname= ?, content = ? where communityNum = ?";
+			String query = "update fishing.community set title = ? , nickname= ?, content = ? where communityNum = ?";
 			
 			Connection con = null;
 			PreparedStatement pstmt = null;
@@ -210,7 +210,7 @@ public class CommunityDAO {
 				con = DBMangement.getConnection();
 				pstmt = con.prepareStatement(query);
 				pstmt.setString(1, cvo.getTitle());
-				pstmt.setString(2, cvo.getnicname());
+				pstmt.setString(2, cvo.getnickname());
 				pstmt.setString(3, cvo.getContent());
 				pstmt.setInt(4, cvo.getCommunityNum());
 				
